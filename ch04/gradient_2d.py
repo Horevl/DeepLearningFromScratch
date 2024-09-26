@@ -7,11 +7,11 @@ from mpl_toolkits.mplot3d import Axes3D
 
 def _numerical_gradient_no_batch(f, x):
     h = 1e-4 # 0.0001
-    grad = np.zeros_like(x) # 生成和x形状相同的数组
+    grad = np.zeros_like(x) # 生成和x形状相同、所有元素都为0的数组
     
     for idx in range(x.size):
         tmp_val = x[idx]
-        
+
         # f(x+h)的计算
         x[idx] = float(tmp_val) + h
         fxh1 = f(x) # f(x+h)
