@@ -25,6 +25,8 @@ for i in range(hidden_layer_size):
     if i != 0:
         x = activations[i-1]
 
+    # 改变w、z的赋值
+
     # 改变初始值进行实验！
     w = np.random.randn(node_num, node_num) * 1
     # w = np.random.randn(node_num, node_num) * 0.01
